@@ -69,9 +69,9 @@ Call C = S·N(d1) − K·e^(−rt)·N(d2)
 Put  P = K·e^(−rt)·N(−d2) − S·N(−d1)
 ```
 
-`N(·)` is the standard normal CDF (from SciPy). Heatmaps vary S and σ by ±20% to visualize pricing sensitivity.
+`N(·)` is the standard normal CDF (from SciPy). Heatmaps vary S and σ by ±20% (by default) to visualize pricing sensitivity.
 
-## Programmatic Use
+## Usage
 You can import and use the pricing class without Streamlit:
 
 ```python
@@ -108,4 +108,4 @@ uv.lock              # Locked dependency resolution for uv
 Issues and PRs are welcome. For larger changes, please open an issue to discuss first.
 
 ## License
-No license specified yet. Add your preferred license to clarify usage.
+you can use this code and critique it idc
