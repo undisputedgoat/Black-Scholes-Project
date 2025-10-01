@@ -14,13 +14,13 @@ def test_init(bs_model):
     assert bs_model.volatility == 0.2
 
 def test_calculate_prices(bs_model):
+    """Expected values from manual Black-Scholes calc (rounded for float precision)"""
     call, put = bs_model.calculate_prices()
-    # Expected values from manual Black-Scholes calc (rounded for float precision)
-    assert np.isclose(call, 10.45, atol=0.01)  # Approx 10.45-10.46 depending on norm precision
+    assert np.isclose(call, 10.45, atol=0.01) 
     assert np.isclose(put, 5.57, atol=0.01)
 
 def test_calculate_prices_edge_case():
-    # Edge case: t=0, should return max(S-K, 0) for call, max(K-S, 0) for put
+    """Edge case: t=0, should return max(S-K, 0) for call, max(K-S, 0) for put"""
     bs = BlackScholes(current_price=100, strike_price=90, time=0, interest_rate=0.05, volatility=0.2)
     call, put = bs.calculate_prices()
     assert np.isclose(call, 10, atol=0.01)  # Intrinsic value

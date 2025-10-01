@@ -7,6 +7,11 @@ Interactive Streamlit app to price European call and put options using the Black
 - Adjustable inputs: current price (S), strike (K), time to maturity (t, years), risk‑free rate (r), volatility (σ)
 - Dual heatmaps showing call/put values across S and σ (±20% around inputs)
 - In‑app reference table explaining each variable
+- Deployed on Streamlit: https://black-scholes-project-kevinxiao.streamlit.app/
+
+## App Screenshots
+![Screenshot 1](/screenshots/Screenshot%202025-10-01%20at%209.18.49 pm.png)
+![Screenshot 2](/screenshots/Screenshot%202025-10-01%20at%209.19.33 pm.png)
 
 ## Quick Start
 

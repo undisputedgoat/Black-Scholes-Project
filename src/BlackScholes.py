@@ -12,6 +12,8 @@ class BlackScholes:
         self.volatility = volatility
 
     def calculate_prices(self) -> tuple[float, float]:
+        """Prices the European call and put options using the Black-Scholes equation. 
+        """
         K = self.strike_price
         t = self.time
         r = self.interest_rate
@@ -24,11 +26,9 @@ class BlackScholes:
         return call_price, put_price
 
     def _calculate_prices(self, S, sigma) -> tuple[float, float]:
-        """This one's for internal usage because the current price (S) and volatility (sigma) have to change.
-        
-        Only implemented in heatmap() to account for the variation in values. 
+        """Ror internal usage because the current price (S) and volatility (sigma) have to change.
+        Only implemented in heatmap().
         """
-        
         K = self.strike_price
         t = self.time
         r = self.interest_rate
@@ -39,6 +39,14 @@ class BlackScholes:
         return call_price, put_price
 
     def heatmap(self):
+        """Generates two heatmaps for call values and put values respectively. 
+        Graphs the values based on current price (S) and volatility (sigma) within a ±20% of their initial values
+    
+        Returns: matplotlib.figure.Figure
+            A matplotlib Figure containing two subplots:
+            - Left: call option values
+            - Right: put option values
+        """
         ARRAY_LENGTH = 10
         RANGE = 0.2
         call_2darray = np.zeros((ARRAY_LENGTH, ARRAY_LENGTH))
