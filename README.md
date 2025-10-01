@@ -108,4 +108,4 @@ uv.lock              # Locked dependency resolution for uv
 Issues and PRs are welcome. For larger changes, please open an issue to discuss first.
 
 ## License
-you can use this code and critique it idc
+MIT License. Copyright (c) 2025 undisputedgoat

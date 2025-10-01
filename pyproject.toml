@@ -12,3 +12,8 @@ dependencies = [
     "seaborn>=0.13.2",
     "streamlit>=1.49.1",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
